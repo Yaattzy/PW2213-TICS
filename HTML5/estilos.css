@@ -1,0 +1,28 @@
+header {
+    background: peru;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+
+header nav ul li {
+    width: 120px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+header nav ul li:hover  {
+    width: 130px;
+    background: lightblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background: purple; 
+    color: white;
+}
