@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h2>Formulario</h2>
+    <form action="#">
+      <h3>text</h3>
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingrese un nombre"
+        size="50"
+        value="JUAN"
+        maxlength="10"
+        autofocus
+        disabled
+      />
+
+      <h3>radio</h3>
+
+      <fieldset>
+        <legend>Género</legend>
+        <input type="radio" name="genero" value="hombre" checked /> Hombre
+        <input type="radio" name="genero" value="mujer" /> Mujer
+        <input type="radio" name="genero" value="otro" /> Otro
+      </fieldset>
+
+      <h3>select</h3>
+      <label for="frutas">Frutas</label>
+      <select name="frutas" id="frutas">
+        <optgroup label="Favoritas">
+          <option value="fresa">Fresa</option>
+          <option value="naranja" selected>Naranja</option>
+        </optgroup>
+        <optgroup label="Otras">
+          <option value="uva">Uva</option>
+        </optgroup>
+      </select>
+
+      <h3>textarea</h3>
+      <textarea name="mensaje" id="mensaje" cols="50" rows="10" placeholder="Escribe aquí.."></textarea>
+
+      <h3>Datalist</h3>
+      <label for="busc">Buscador:</label>
+      <input id="busc" list="buscador">
+      <datalist id="buscador">
+        <option value="Chrome"></option>
+        <option value="Safari"></option>
+        <option value="Opera"></option>
+      </datalist>
+
+      <h3>password</h3>
+      <input type="password">
+
+      <h3>checkbox</h3>
+      <input type="checkbox" name="sol" value="1"> Sol
+      <input type="checkbox" name="luna" value="2"> Luna
+
+      <h3>color</h3>
+      <input type="color">
+
+      <h3>fecha</h3>
+
+      <input type="date" value="2021-09-08" min="2021-09-07" max="2022-09-08">
+      <input type="datetime-local">
+      <input type="week">
+      <input type="month">
+      <input type="time">
+
+      <h3>email</h3>
+      <input type="email">
+
+      <h3>url</h3>
+      <input type="url">
+
+      <br><br>
+      <input type="submit">
+      <input type="image">
+      <button>Enviar</button>
+      <input type="reset">
+
+      <br><br><br><br><br><br><br>
+    </form>
+  </body>
+</html>
