@@ -1,0 +1,59 @@
+/*Selectores de atributos*/
+
+[href] {
+    color: green;
+}
+
+[href="#"] {
+    color: red;
+}
+
+/*Selecciona los elementos que tienen ese atributo y al menos ese valor una vez*/
+[class~="verde"] {
+    color: green;
+}
+
+/*Selecciona los elementos que tienen ese atributo y 
+exactamente ese valor o empiece por el valor seguido de un guión*/
+[class|="verde"] {
+    color: blue;
+}
+
+/*Selecciona los elementos que tienen ese atributo y 
+empiece por ese valor*/
+[class^="rojo"] {
+    color:rgb(56, 55, 54); 
+}
+
+/*Selecciona los elementos que tienen ese atributo y 
+terminen por ese valor*/
+[class$="rojo"] {
+    color:orange;
+}
+
+/*Selecciona los elementos que tienen ese atributo y 
+contengan por ese valor*/
+[class*="rojo"] {
+    color:palevioletred;
+}
+
+/*Selectores combinarios*/
+/*Selector de hermano adyacente*/
+h1 + h2 {
+    color: red;
+}
+
+/*Selector de hermano general*/
+h1 ~ h2 {
+    color: green;
+}
+
+/*Selectores descendentes*/
+p span {
+    color: orange;
+}
+
+/*Selectores de hijo directo*/
+p > span {
+    color:red;
+}
