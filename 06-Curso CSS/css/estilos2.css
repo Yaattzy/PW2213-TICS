@@ -1,0 +1,46 @@
+/*
+Etiqueta -> 001
+Clases y pseudoaclases -> 010
+ID -> 100
+Estilos en línea -> 1000
+!important ----> Ganando a todo
+
+*/
+
+#titulo {
+    color: green !important;
+}
+
+.titulo {
+    color: red;
+}
+
+h1 {
+    color:turquoise;
+    font-size: 16px;
+}
+
+h1.titulo#titulo {
+    color: tomato !important;
+}
+
+p {
+    color: green;
+    font-size: 20px;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    color:red;
+}
+
+.li {
+    color: initial;
+}
+
+
+
+
