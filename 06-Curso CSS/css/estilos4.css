@@ -1,0 +1,31 @@
+/*
+Display: Permitir como definir el comportamiento de un elemento 
+con respecto a los elementos adyacentes.
+
+inline: El elemento se comporta como si fuera un elemento en línea.
+
+block: El elemento se comporta como si fuera un elemento en bloque.
+
+inline-block: El elemento se comporta como si fuera un elemento
+en línea, pero permite modificar width y height.
+
+none: Oculta el elemento, pero se sigue renderizando.
+*/
+
+.linea {
+    background: blueviolet;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bloque {
+    background: lightcoral;
+}
+
+.parrafo {
+    display: inline-block;
+    width: 49%;
+}

@@ -1,0 +1,69 @@
+
+.contenedor2, .contenedor1 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.contenedor1 {
+    background: lightgreen;
+    position: relative;
+    /*top y left tienen prioridad sobre right y bottom*/
+    left: 50px;
+    top: 50px;
+}
+
+.contenedor2 {
+    background: lightcoral;
+    position: relative;
+}
+
+.contenedor {
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+}
+
+[class^="caja"] {
+    width: 40px;
+    height: 40px;
+}
+
+.caja1 {
+    background: lightcoral;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.caja2 {
+    background: lightgreen;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.caja3 {
+    background: lightskyblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.caja4 {
+    background: lightslategray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.caja5 {
+    background: pink;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
