@@ -1,0 +1,52 @@
+/*
+    Pseudoelementos
+
+    Se utilizan para dar estilo a partes específicas de un elemento.
+
+    ::first-letter - Elementos en línea
+    ::first-line - Elementos en línea
+    ::selection
+    ::before
+    ::after
+*/
+
+.titulo::first-letter {
+    color: red;
+    font-size: 42px;
+    background: black;
+}
+
+.linea::first-letter {
+    color: red;
+}
+
+.texto::first-line {
+    color: blue;
+}
+
+.texto::selection {
+    color: white;
+    background: tomato;
+}
+
+/*
+Para before y after es obligatorio la propiedad content.
+
+Por defecto son elementos en línea.
+*/
+
+.dinero::before {
+    content: '$';
+}
+
+.dinero::after {
+    content: ' MXN'
+}
+
+.ejemplo::before, .ejemplo::after {
+    content: '';
+    display: block;
+    background: black;
+    width: 10px;
+    height: 10px;
+}
