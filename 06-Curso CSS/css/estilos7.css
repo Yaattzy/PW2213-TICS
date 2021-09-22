@@ -1,0 +1,175 @@
+/*
+Pseudoclases
+
+Dinamicas
+
+    :link - link no visitado
+    :visited(links) - link visitado
+    :active (links) - al momento del click
+    :hover - Al poner mouse sobre el elemento
+    :focus - cuando el elemento tiene el foco
+*/
+
+.enlace:link {
+    color: green;
+}
+
+.enlace:visited {
+    color: orange;
+}
+
+.enlace:active {
+    color: blue;
+}
+
+.boton {
+    color: white;
+    background: blueviolet;
+    padding: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.boton:active {
+    transform: scale(.9);
+}
+
+.boton:hover {
+    background: black;
+}
+
+.input:focus {
+    background: green;
+}
+
+/*
+   --------------------------------
+   Estado
+
+   :enabled
+   :disabled
+   :checked
+   :required
+   :valid
+   :invalid
+   :in-range
+   :out-of-range
+
+*/
+
+.input, .label {
+    display: block;
+}
+
+.input:enabled {
+    background: green;
+}
+
+.input:disabled {
+    background: red;
+}
+
+.checkbox, .checkbox + label {
+    display: inline-block;
+}
+
+.checkbox:checked + label {
+    font-size: 30px;
+} 
+
+.input:required {
+    background: blue;
+}
+
+
+/*
+    --------------------
+    Estructural
+
+    :root
+
+    :empty - Se aplica a elementos vacios
+
+    CHILD: 
+        :first-child
+        :last-child
+
+        :nth-child()
+        :nth-last-child()
+        :only-child
+
+        -valores: 
+            odd - impares
+            even- pares
+            numeros enteros
+            ecuaciones(3n+1, 4n, 2n+2)
+
+        -type:
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        :nth-of-last-type()
+        :only-of-type
+
+    :not
+*/
+
+/* .parrafo {
+    background: lightgreen;
+    padding: 10px;
+} */
+
+/* .parrafo:empty {
+    padding: 0;
+} */
+
+/* .parrafo:first-child {
+    background: lightpink;
+} */
+
+/* .parrafo:last-child{
+    background: lightsalmon;
+} */
+
+/* .parrafo:nth-child(odd) {
+  background: lightseagreen;
+}
+
+.parrafo:nth-child(even) {
+    background: pink;
+} */
+
+
+/* .parrafo:nth-child(8) {
+    background: purple;
+} */
+
+/* .parrafo:nth-child(2n+1) {
+    background: purple;
+} */
+
+/* .parrafo:nth-last-child(4) {
+    background: red;
+} */
+
+/* .parrafo:only-child {
+    background: royalblue;
+} */
+
+/* .parrafo:nth-of-type(4){
+    background: saddlebrown;
+} */
+
+.parrafo:not(div){
+    background: salmon;
+}
+
+
+
+
+
+
+
+
