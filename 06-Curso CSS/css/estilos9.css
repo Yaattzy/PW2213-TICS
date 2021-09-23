@@ -1,0 +1,39 @@
+/*
+    Degradado es la transición entre un color y otro.
+
+    Existen dos tipos: lineadas y radiales.
+
+    2 colores: 0% 100%;
+    3 colores: 0% 50% 100%
+
+    * Son valores de background-image
+
+        Linear-grandient([direction], color1, color2, color2)
+        background-image: linear-gradient(red, blue)
+
+        direcciones: to | top, right, bottom, left, top left, top right.
+            También pueden ser grados, utilizar palabra deg.
+
+        Inicios o paradas de color: usar medidas como en px, em, %...
+
+    ---------------------
+        radial-gradient([shape], color1, color2)
+        background-image: radial-gradient(red, blue)
+
+        Shape: Por defecto circle, tambien existe ellipse.
+
+
+        Origen: at | top, right, bottom, left, center....
+
+*/
+
+.caja {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-image: linear-gradient(45deg,red 50%, blue 50%, green 75%, orange 75%);
+    background-size: 30px 30px;
+    /* background-image: radial-gradient(ellipse 200px 50px at bottom, transparent 50%, blue 50%); */
+}
+
+
