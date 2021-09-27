@@ -1,3 +1,33 @@
+/*
+    FLEXBOX
+
+    display: flex(bloque) | inline-flex(linea)
+
+    *flex-direction: row(defecto) | row-reverse | column | column-reverse
+
+    *flex-wrap: nowrap(defecto) | wrap | wrap-reverse
+
+
+    Alineamiento
+        Main axis(Eje principal)
+            - justify-content: 
+            flex-start(defecto) | flex-end | center | space-between |
+            space-around | space-evenly
+
+        Cross axis(Eje secundario)
+            - align-items: UNA SOLA LINEA
+            stretch(defecto) | flex-start | flex-end | center | baseline
+
+            - aling-content: MÁS DE UNA LINEA
+            stretch(defecto) | flex-start | flex-end | center | baseline |
+            space-around | space-evenly | space-between
+
+            - align-self: 
+            Sirve para alinear un elemento en concreto en el eje secundario.
+            
+
+    */
+
 .flex-container {
     height: 400px;
     background-color: lightblue;
