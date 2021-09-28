@@ -8,19 +8,70 @@
 body {
     margin: 0 auto;
     max-width: 1024px;
+    border: 3px solid red;
 }
 
 header {
     background: var(--blue);
+    position: relative;
 }
 
 header nav {
     background: var(--pink);
     color: #FFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    padding-left: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+input[type="search"], input[type="submit"] {
+    border-radius: 5px;
+    height: 30px;
+}
+
+input[type="submit"] {
+    color: #FFF;
+    background: var(--orange);
+    border: none;
+}
+
+form {
+    margin-right: 20px;
 }
 
 .logo {
     position: absolute;
     left: 120px;
     top: 10px;
+}
+
+/* SECCIONES */
+
+.secc1 article {
+    text-align: center;
+}
+
+.img-principal {
+    width: 95%;
+    margin: 20px 0;
+    border: 5px solid #ccc;
+}
+
+.secc2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.secc2 article {
+    width: 30%;
 }
