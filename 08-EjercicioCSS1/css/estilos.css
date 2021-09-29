@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     max-width: 1024px;
     border: 3px solid red;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -75,3 +76,55 @@ form {
 .secc2 article {
     width: 30%;
 }
+
+.secc2 p {
+    font-size: 14px;
+}
+
+.secc2 button {
+    padding: 5px 12px; 
+    color: var(--orange);
+    background: #FFF;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+}
+
+.secc2art1 h2{
+    font-size: 52px;
+    margin: 0;
+}
+
+.secc2 h3 {
+    font-size: 40px;
+    margin: 0;
+}
+
+audio, video {
+    width: 98%;
+}
+
+video {
+    height: 200px;
+}
+
+/*FOOTER*/
+
+footer {
+    height: 100px;
+    background: var(--pink);
+    color: #FFF;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 10px 0;
+}
+
+footer div {
+    background: var(--dark-prink);
+    display: inline-block;
+    width: 32%;
+    height: 90%;
+    vertical-align: bottom;
+    border-radius: 5px;
+}
+
