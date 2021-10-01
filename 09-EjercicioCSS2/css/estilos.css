@@ -1,10 +1,90 @@
 :root {
     --cafe: #e9d6b3;
-    --lila: #9a77cd;
+    --lila: #865dc1;    ;
     --azul: #add8e6;
     --gris: #fafafa;
 }
 
-/* header {
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/***HEADER***/
+
+header {
     display: flex;
-} */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.redes-header {
+    margin: 10px 0 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    /* text-shadow: 0 0 1px purple, 0 0 2px purple; */
+    -webkit-text-stroke: 1px purple;
+}
+
+/***MENU***/
+
+.barra {
+    background-image: linear-gradient(var(--lila) 5%, #c7badb 13% 16%, var(--lila) 40%);
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: small; /*16px - 1em*/
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/****CONTENIDO***/
+
+section, aside {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0 0;
+}
+
+section {
+    width: 60%;
+    padding: 0 15px;
+}
+
+aside {
+    width: 36%;
+    margin: 20px 0 0;
+}
+
+
+/***ASIDE***/
+
+.barra-aside{
+    text-align: center;
+    padding: 7px 0;
+}
+
+.boder-aside {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.publicidad-img {
+    text-align: center;
+    margin: 15px 0;
+} 
+
+.publicidad-img img {
+    width: 40%;
+    border: 2px solid #bbb;
+}
