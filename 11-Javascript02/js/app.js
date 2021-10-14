@@ -114,6 +114,75 @@ let nuevoedad = year.map((x, index) => {
 });
 console.log("nuevoedad", nuevoedad);
 
+const cuadrado = function(num) {
+    return num * num;
+}
+console.log(cuadrado(2));
+
+const cuadrado2 = (num) => {
+    return num * num;
+}
+console.log(cuadrado2(2));
+
+const cuadrado3 = num => num * num;
+console.log(cuadrado3(3));
+
+const frutas = [
+    {
+        nombre: 'Manzana',
+        cantidad: 4
+    },
+    {
+        nombre: 'Fresa',
+        cantidad: 18
+    },
+    {
+        nombre: 'Uva',
+        cantidad: 8
+    },
+    {
+        id: 2,
+        nombre: 'Mora',
+        cantidad: 12
+    }
+];
+//Filter
+const menores10 = frutas.filter(fruta => fruta.cantidad < 15 && fruta.nombre.startsWith("M"));
+console.log(menores10);
+//Reduce
+let suma = 0;
+for(let f of frutas) {
+    suma = suma + f.cantidad;
+}
+console.log(suma);
+
+const inv = frutas.reduce((acumulador, valorActual) => acumulador + valorActual.cantidad, 0);
+console.log(inv); 
+
+const inv2 = menores10.reduce((suma, {cantidad}) => suma + cantidad, 0);
+console.log(inv2);
+
+const frutas2 = frutas.map(f => ({
+    ...f,
+    texto: f.nombre,
+    value: f.cantidad
+}))
+.filter(({value}) =>  value > 5);
+console.log("frutas2", frutas2);
+
+//Desestructurción
+let nombre1 =  frutas[0].nombre;
+console.log(nombre1);
+
+let {nombre: nuevoNombre, cantidad} = frutas[0];
+console.log(nuevoNombre);
+
+const nombres1 = ['nombre1', 'nombre2', 'nombre3'];
+const nombres2 = ['nombre4', 'nombre5', 'nombre6'];
+
+const arrNombres = [...nombres1, ...nombres2];
+console.log(arrNombres);
+
 
 
 
