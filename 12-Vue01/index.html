@@ -13,10 +13,10 @@
         <h1>{{ titulo }}</h1>
         <hr>
         <label for="fruta" class="form-label">Fruta</label>
-        <input v-model="nuevaFruta" class="form-control mb-3" id="fruta" placeholder="Ingrese una fruta">
+        <input v-model="nuevaFruta" @keyup.enter="agregarFruta" class="form-control mb-3" id="fruta" placeholder="Ingrese una fruta">
         {{nuevaFruta}} <br>
-        <button @click="agregarFruta"  class="btn btn-primary">Agregar</button>
-
+        <button @click="agregarFruta" class="btn btn-primary">Agregar</button>
+       
         <hr>
         <ul class="list-group">
             <li 
@@ -48,7 +48,12 @@
             </li>
         </ul>
         <hr>
-        <h3>Mi cantidad total de frutas: {{sumarFrutas}}</h3>
+        <h3 
+            class="m-4"
+            :class="colorCantidad"
+        >
+            Mi cantidad total de frutas: {{sumarFrutas}}
+        </h3>
     </div>
     <script src="main.js"></script> 
     <script>

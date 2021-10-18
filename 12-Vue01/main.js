@@ -30,6 +30,9 @@ const app = Vue.createApp({
     computed: {
         sumarFrutas() {
             return this.frutas2.reduce((suma, {cantidad}) => suma + cantidad, 0);
+        },
+        colorCantidad() {
+            return this.sumarFrutas > 10 ? 'text-success' : 'text-danger';
         }
     }
 });
