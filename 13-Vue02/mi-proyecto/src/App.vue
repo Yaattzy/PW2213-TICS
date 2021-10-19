@@ -1,23 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld :msg="titulo" descripcion="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci nemo rerum incidunt deleniti eveniet, quasi nam possimus eum dicta atque ipsa saepe laborum nulla. Eum perferendis vero architecto nulla fuga?"/>
+  <div id="app" class="m-4">
+    <img alt="Vue logo" src="./assets/logo.png" width="30">
+    <Tarjeta 
+      v-for="f in listaElementos"
+      :key="f.id"
+      :titulo="f.nombre" 
+      :subtitulo="f.color" 
+      :texto="f.descripcion"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Tarjeta from './components/Tarjeta.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Tarjeta
   },
   data() {
     return {
-      titulo: "Welcome to Your Vue App"
+      listaElementos: [
+        {
+          id: 1,
+          nombre: "Fresa",
+          color: "Rojo",
+          descripcion: "Fruta que le gusta a mucha gente",
+          cantidad: 10
+        },
+        {
+          id: 2,
+          nombre: "Manzana",
+          color: "Verde",
+          descripcion: "Esta es mi otra fruta",
+          cantidad: 8
+        },
+        {
+          id: 3,
+          nombre: "Uva",
+          color: "Lila",
+          descripcion: "Mi otra fruta de nuevo",
+          cantidad: 4
+        }
+      ]
     }
-  },
+  }
 }
 </script>
 
