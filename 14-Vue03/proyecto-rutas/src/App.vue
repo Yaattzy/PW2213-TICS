@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav colors="#ccc"/>
-    <router-view/>
+    <router-view class="m-5"/>
   </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
