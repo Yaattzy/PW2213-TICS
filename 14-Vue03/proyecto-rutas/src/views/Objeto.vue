@@ -1,7 +1,7 @@
 <template>
   <div class="m-4">
       <h1>Mis Películas</h1>
-      <button class="btn btn-success" @click="consumirPeliculasAsync">Buscar</button>
+      <button class="btn btn-success mb-3" @click="consumirPeliculasAsync">Buscar</button>
       <Card
         v-for="p in peliculas"
         :key="p.id"
