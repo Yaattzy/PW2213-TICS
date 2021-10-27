@@ -1,5 +1,5 @@
 <template>
-  <div class="tarjeta">
+  <div>
     <router-link :to="`/objeto/detalle/${id}`" class="router">
       <div class="card" style="width: 300px;">
         <!-- <img :src="imagen" class="card-img-top" :alt="titulo" /> -->
@@ -29,11 +29,6 @@ export default {
 </script>
 
 <style>
-.tarjeta {
-  display: flex;
-  justify-content: center;
-}
-
 .router {
   text-decoration: none;
 }

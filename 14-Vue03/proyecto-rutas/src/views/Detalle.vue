@@ -1,6 +1,11 @@
 <template>
   <div class="m-4">
-    <h1>Detalle Película</h1>
+    <router-link to="/objeto">Regresar</router-link>
+    <h1>{{pelicula.title}}</h1>
+    <h3>{{pelicula.director}}</h3>
+    <img :src="pelicula.movie_banner" alt="" width="500">
+    <br><br>
+    <p>{{pelicula.description}}</p>
   </div>
 </template>
 
@@ -25,6 +30,9 @@ export default {
       }
     },
   },
+  created(){
+    this.detallePelicula();
+  }
 };
 </script>
 
