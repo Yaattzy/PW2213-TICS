@@ -7,7 +7,8 @@
         class="mb-3"
         titulo="Nombre"
         id="nombre"
-        :error="true"
+        :error="erroresValidacion && !validacionNombre"
+        mensajeError="El nombre es obligatorio"
         placeholder="Ingrese nombre de la persona"
         :maxlength="50"
       />
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import Input from "../components/Input.vue";
 export default {
   name: "Agregar",
@@ -46,13 +48,46 @@ export default {
         direccion: "",
         telefono: "",
       },
+      erroresValidacion: false,
     };
-  }, 
+  },
+  computed: {
+    validacionNombre() {
+      return (
+        this.persona.nombre !== undefined && this.persona.nombre.trim() !== ""
+      );
+    },
+  },
   methods: {
+    ...mapActions(["crearPersona"]),
     guardarPersona() {
-      alert("Guardar");
-    }
-  }
+      if (this.validacionNombre) {
+        this.erroresValidacion = false;
+        this.crearPersona({
+          params: this.persona,
+          onComplete: (response) => {
+            // Si todo sale bien
+            this.$notify({
+              title: response.data.mensaje,
+              type: 'success'
+            });
+            this.$router.push({
+              name: "Home",
+            });
+          },
+          onError: (error) => {
+            // Si hay error
+            this.$notify({
+              title: error.response.data.mensaje,
+              type: 'error'
+            });
+          },
+        });
+      } else {
+        this.erroresValidacion = true;
+      }
+    },
+  },
 };
 </script>
 

@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <h1>Personas</h1>
-    <b-button to="/agregar" variant="outline-primary">Agregar</b-button>
-    <Table :items="personas" :fields="campos" :busy="loading"/>
+    <div class="d-flex justify-content-between align-items-start">
+      <h1>Personas</h1>
+      <b-button to="/agregar" variant="outline-primary">Agregar</b-button>
+    </div>
+    <Table :items="personas" :fields="campos" :busy="loading" />
   </div>
 </template>
 
@@ -33,6 +35,9 @@ export default {
             return value || "--";
           },
         },
+        {
+          key: 'actions', label: 'Acciones'
+        }
       ],
     };
   },

@@ -7,6 +7,10 @@
           <strong>Cargando...</strong>
         </div>
       </template>
+
+       <template #cell(actions)="data">
+         <slot name="actions" :item="data"></slot>
+      </template>
     </b-table>
   </div>
 </template>
