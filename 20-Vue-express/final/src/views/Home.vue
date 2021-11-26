@@ -4,7 +4,12 @@
       <h1>Personas</h1>
       <b-button to="/agregar" variant="outline-primary">Agregar</b-button>
     </div>
-    <Table :items="personas" :fields="campos" :busy="loading" />
+    <Table :items="personas" :fields="campos" :busy="loading">
+        <template slot="actions" slot-scope="{ item }">
+            <b-button @click="onEditar(item)" variant="primary" size="sm" class="me-2">Editar</b-button>
+            <b-button @click="onEliminar(item)" variant="danger" size="sm">Eliminar</b-button>
+        </template>
+    </Table>
   </div>
 </template>
 
@@ -36,8 +41,9 @@ export default {
           },
         },
         {
-          key: 'actions', label: 'Acciones'
-        }
+          key: "actions",
+          label: "Acciones",
+        },
       ],
     };
   },
@@ -46,6 +52,17 @@ export default {
   },
   methods: {
     ...mapActions(["setPersonas"]),
+    onEditar(data) {
+      this.$router.push({
+        name: 'Editar',
+        params: {
+          id: data.item.id
+        }
+      })
+    },
+    onEliminar(data){
+       alert(data.item.id);
+    }
   },
   mounted() {
     this.setPersonas();
