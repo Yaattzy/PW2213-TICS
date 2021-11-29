@@ -68,30 +68,32 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["obtenerPersona"]),
+    ...mapActions(["obtenerPersona", "editarPersona"]),
     guardarPersona() {
       if (this.validacionNombre) {
         this.erroresValidacion = false;
-        /*this.crearPersona({
+
+        this.editarPersona({
+          id: this.persona.id,
           params: this.persona,
           onComplete: (response) => {
-            // Si todo sale bien
             this.$notify({
-              title: response.data.mensaje,
-              type: 'success'
+              type: 'success',
+              title: response.data.mensaje
             });
+
             this.$router.push({
-              name: "Home",
+              name: 'Home'
             });
           },
           onError: (error) => {
-            // Si hay error
             this.$notify({
-              title: error.response.data.mensaje,
-              type: 'error'
+              type: 'error',
+              title: error.response.data.mensaje
             });
-          },
-        }); */
+          }
+        })
+       
       } else {
         this.erroresValidacion = true;
       }

@@ -44,6 +44,16 @@ export default new Vuex.Store({
         onComplete(response);
       })
       .catch(onError);
+    },
+    editarPersona({commit}, {id, params, onComplete, onError}){
+      axios.put(`http://localhost:3000/personas/${id}`, params)
+      .then(onComplete)
+      .catch(onError);
+    },
+    eliminarPersona({commit}, {id, onComplete, onError}){
+      axios.delete(`http://localhost:3000/personas/${id}`)
+      .then(onComplete)
+      .catch(onError);
     }
   },
   modules: {

@@ -51,7 +51,7 @@ export default {
     ...mapState(["personas", "loading"]),
   },
   methods: {
-    ...mapActions(["setPersonas"]),
+    ...mapActions(["setPersonas", "eliminarPersona"]),
     onEditar(data) {
       this.$router.push({
         name: 'Editar',
@@ -61,7 +61,34 @@ export default {
       })
     },
     onEliminar(data){
-       alert(data.item.id);
+
+       this.$bvModal.msgBoxConfirm('Esta opción no se puede deshacer', {
+          title: '¿Esta seguro que desea eliminar a la persona?',
+          size: 'sm',
+          buttonSize: 'sm',
+          okVariant: 'danger',
+          okTitle: 'Aceptar',
+          cancelTitle: 'Cancelar',
+          centered: true
+        })
+          .then(value => {
+            if(value) {
+              this.eliminarPersona({
+                id: data.item.id,
+                onComplete: (response) => {
+                  this.$notify({
+                    type: 'success',
+                    title: response.data.mensaje
+                  });
+
+                  setTimeout(() => this.setPersonas(), 1000);
+                }
+              })
+            }
+          })
+          .catch(err => {
+            // An error occurred
+          })
     }
   },
   mounted() {
